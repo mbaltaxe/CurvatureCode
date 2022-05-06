@@ -34,7 +34,8 @@ im2 = rgb2gray(im2);
 im3 = imread('undistort2 0049.tif');
 
 % whatever general path the images will be in
-inpath = sprintf( '/Users/roahm/Box Sync/FREEWearProject/%s', testName );
+%inpath = sprintf( '/Users/roahm/Box Sync/FREEWearProject/%s', testName );
+inpath = sprintf( '/Users/mbaltaxe/Dropbox (University of Michigan)/FREEWearProject/%s', testName );
 
 
 %Within the test (testName) folder, we want to go into the one that 

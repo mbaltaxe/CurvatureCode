@@ -12,25 +12,19 @@ testName = 'A-StorageTime';
 
 % whatever general path the images will be in
 %inpath = sprintf( '/Users/roahm/Box Sync/FREEWearProject/%s', testName );
-inpath = sprintf( '/Users/mbaltaxe/Dropbox (University of Michigan)/FREEWearProject/%s', testName );
+inpath = sprintf( '/Users\mbaltaxe\Dropbox (University of Michigan)/FREEWearProject/%s', testName );
             
 % get the list of image files in this folder 
-img_files = dir( sprintf( '%s/HomographyFrames/*.jpg',...
-    inpath ) ); %MB changing this file type to jpeg
-%disp(inpath);
-%disp(dir( sprintf( '%s/HomographyFrames/*.jpg',...
-%    inpath ) ));
-%disp("Stop 1");
-%disp(length( img_files ));
+img_files = dir( sprintf( '%s/HomographyFrames/*.tif',...
+    inpath ) );
+
 for i = 1:length( img_files )
 
     fileName = img_files(i).name;
 
     im = imread( sprintf( '%s/HomographyFrames/%s',...
         inpath, fileName ) );
-    
-    %disp("Stop 2");
-    
+
     %make grayscale    
     im = rgb2gray(im);
     im = imadjust( im );
@@ -61,4 +55,3 @@ for i = 1:length( img_files )
         fileName(1:end-4) ), 'im' );
 
 end
-%disp("Stop Last");

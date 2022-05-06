@@ -18,7 +18,8 @@ clearvars; close all;
 testName = 'A-StorageTime';
 
 % whatever general path the images will be in
-inpath = sprintf( '/Users/roahm/Box Sync/FREEWearProject/%s', testName );
+%inpath = sprintf( '/Users/roahm/Box Sync/FREEWearProject/%s', testName );
+inpath = sprintf( '/Users/mbaltaxe/Dropbox (University of Michigan)/FREEWearProject/%s', testName );
 
 %I suggest plotting the mean + standard deviation, but there is also an
 %option to plot the total range of values if you set this to 0:

@@ -19,7 +19,8 @@ thresh = 50;
 testName = 'A-StorageTime';
 
 % whatever general path the images will be in
-inpath = sprintf( '/Users/roahm/Box Sync/FREEWearProject/%s', testName );
+%inpath = sprintf( '/Users/roahm/Box Sync/FREEWearProject/%s', testName );
+inpath = sprintf( '/Users/mbaltaxe/Dropbox (University of Michigan)/FREEWearProject/%s', testName );
 
 
 %find the list of binary mat files
