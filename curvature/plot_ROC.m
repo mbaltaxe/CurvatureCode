@@ -29,10 +29,10 @@ function plot_ROC( x, y, R_idx, R_pks, K, fileName, L_full )
 % Last update:  04/14/2019
 
 
-    transparency value for circles
+    %transparency value for circles
     alp = 0.2;
     
-    actual radii of circles:
+    %actual radii of circles:
     R_cc = R_pks./100*L_full;
     
     %turn K into a unit vector

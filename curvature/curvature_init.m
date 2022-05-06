@@ -51,7 +51,7 @@ curveLength = linspace( 0, 100, numPts );
 
 %UPDATE this variable if you are running a different test!
 testName = 'A-StorageTime';
-
+imFolder = 'A-StorageTime'; %MB added this
 % whatever general path the images will be in
 %inpath = sprintf( '/Users/roahm/Box Sync/FREEWearProject/%s', testName );
 inpath = sprintf( '/Users/mbaltaxe/Dropbox (University of Michigan)/FREEWearProject/%s', testName );
@@ -63,9 +63,9 @@ inpath = sprintf( '/Users/mbaltaxe/Dropbox (University of Michigan)/FREEWearProj
 %find the list of centerline mat files
 img_files = dir( sprintf(...
     '%s/CenterlineMat/*.mat', inpath ) );
-
+%disp("Stop 1");
 for i = 1:length( img_files )
-
+    %disp("Stop 2");
     fileName = img_files(i).name;
 
     %organize the points into [x, y] vector
@@ -97,11 +97,11 @@ for i = 1:length( img_files )
         minPkDist, L, L_full );
 
     %plot things to get a feel if the radii are accurate
-    plot_ROC( x, y, R_idx, R_pks, K, imFolder,...
-        fileName, L_full );
+    plot_ROC( x, y, R_idx, R_pks, K,... 
+        fileName, L_full ); %deleted imFolder
 
     if save_files
-
+    %disp("Stop 3");
             %IMPORTANT!!
             %get the magnitude of curvature as a function of the body's length
             %(because the points could be distributed differently along the robot's centerline)
@@ -167,6 +167,6 @@ for i = 1:length( img_files )
 
     end
 
-    close;
+   % close;
 
 end
